@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastries That'll Make You Smile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+                 margin: 0;
+                 font-family: 'Roboto', sans-serif;
+                 background-color: #fdf4e3;
+             }
+             .header {
+                 background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
+                 background-size: cover;
+                 background-position: center;
+                 color: white;
+                 text-align: center;
+                 padding: 100px 0;
+                 position: relative;
+             }
+             .header h1 {
+                 font-size: 48px;
+                 margin: 0;
+             }
+             .navbar {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 background-color: #333;
+                 padding: 10px 20px;
+             }
+             .navbar a {
+                 color: white;
+                 text-decoration: none;
+                 padding: 10px 20px;
+             }
+             .navbar a:hover {
+                 background-color: #575757;
+             }
+             .navbar .search-bar {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar input[type="text"] {
+                 padding: 5px;
+                 border: none;
+                 border-radius: 5px;
+             }
+             .navbar .icons {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .icons i {
+                 color: white;
+                 margin-left: 20px;
+                 font-size: 20px;
+             }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .content .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
+        }
+        .content .box h2 {
+            margin-top: 0;
+        }
+        .content .box input {
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .cart-item .item-info {
+            flex-grow: 1;
+        }
+        .cart-item .item-info .price {
+            color: #888;
+        }
+        .payment-method, .order-summary {
+            margin-bottom: 20px;
+        }
+        .payment-method label, .order-summary label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .order-summary {
+            background-color: #fff;
+            border: 1px solid #e0d6d6;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .order-summary div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .order-summary div:last-child {
+            font-weight: bold;
+        }
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 0.9em;
+            margin-bottom: 20px; /* Space between button and footer */
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.6em;
+        }
+        .modal {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:  100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .modal-content img {
+            width: 50px;
+            height: 50px;
+        }
+        .modal-content h1 {
+            font-size: 24px;
+            margin: 20px 0 10px;
+            color: #333;
+        }
+        .modal-content p {
+            font-size: 16px;
+            color: #666;
+            margin: 0 0 20px;
+        }
+        .modal-content button {
+            background-color: #5a9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .modal-content button:hover {
+            background-color: #4a8;
+        }
+        .modal-content button.custom {
+            background-color: #007bff;
+            padding: 8px 40px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .content .box {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>
+        Pastries That'll Make You Smile
+    </h1>
+</div>
+<div class="navbar">
+    <div class="links">
+        <a href="home.html">
+            HOME
+        </a>
+        <a href="#">
+            CATEGORY
+            <i class="fas fa-caret-down">
+            </i>
+        </a>
+        <a href="about.html">
+            ABOUT US
+        </a>
+        <a href="profile.html">
+            PROFILE
+        </a>
+        <a href="cart.html">
+            CART
+        </a>
+    </div>
+    <div class="search-bar">
+        <input placeholder="Search" type="text"/>
+        <i class="fas fa-search">
+        </i>
+    </div>
+    <div class="icons">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart">
+            </i>
+        </a>
+        <a href="profile.html">
+            <i class="fas fa-user">
+            </i>
+        </a>
+    </div>
+</div>
+<div class="content">
+    <div class="box">
+        <h2>Checkout Information</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your fullname"/>
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Enter your address"/>
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" placeholder="Enter your contact number"/>
+    </div>
+    <div class="box">
+        <h2>Your Cart</h2>
+        <div class="cart-item">
+            <img src="https://storage.googleapis.com/a1aa/image/yoGnRK9gwMpgKFMRzbUjgnVh0k4Cl8fntnespVPG2GHQe0onA.jpg" alt="Red Velvet Cake"/>
+            <div class="item-info">
+                <p>Red Velvet Cake</p>
+                <p class="price">₱ 240.00</p>
+            </div>
+            <div class="quantity">2</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="payment-method">
+            <label>Payment Method</label>
+            <div>
+                <input type="radio" id="paypal" name="payment" value="paypal"/>
+                <label for="paypal">PayPal</label>
+            </div>
+            <div>
+                <input type="radio" id="googlepay" name="payment" value="googlepay"/>
+                <label for="googlepay">Google Pay</label>
+            </div>
+            <div>
+                <input type="radio" id="gcash" name="payment" value="gcash"/>
+                <label for="gcash">Gcash</label>
+            </div>
+        </div>
+        <div class="order-summary">
+            <label>Order Summary</label>
+            <div>
+                <span>Subtotal:</span>
+                <span>₱ 240.00</span>
+            </div>
+            <div>
+                <span>Shipping Fee:</span>
+                <span>₱ 50.00</span>
+            </div>
+            <div>
+                <span>Total:</span>
+                <span>₱ 370.00</span </div>
+        </div>
+        <button class="checkout-btn" onclick="showModal()">Check Out</button>
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <img src="https://storage.googleapis.com/a1aa/image/e04ycnLot6x7bSlw0xrNWNJu1nF2SLMiOgSUn5rTjhLbmN6JA.jpg" alt="Checkmark icon" width="50" height="50"/>
+        <h1>Purchase Successful!</h1>
+        <p>Thank you for purchasing!</p>
+        <button class="custom" onclick="closeModal(); location.href='home.html';">Home</button>
+    </div>
+</div>
+
+<script>
+    function showModal() {
+        console.log("Show modal function called");
+        document.getElementById('modal').style.display = 'flex';
+    }
+    function closeModal() {
+        console.log("Close modal function called");
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+
+<div class="footer">
+    <p>
+        Adamson University | BS COMSCI Students
+    </p>
+</div>
+</body>
+</html>
