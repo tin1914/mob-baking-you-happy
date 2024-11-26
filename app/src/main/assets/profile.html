@@ -1,0 +1,254 @@
+<html>
+<head>
+    <title>
+        Pastries That'll Make You Smile
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+                 margin: 0;
+                 font-family: 'Roboto', sans-serif;
+                 background-color: #fdf4e3;
+             }
+             .header {
+                 background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
+                 background-size: cover;
+                 background-position: center;
+                 color: white;
+                 text-align: center;
+                 padding: 100px 0;
+                 position: relative;
+             }
+             .header h1 {
+                 font-size: 48px;
+                 margin: 0;
+             }
+             .navbar {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 background-color: #333;
+                 padding: 10px 20px;
+             }
+             .navbar a {
+                 color: white;
+                 text-decoration: none;
+                 padding: 10px 20px;
+             }
+             .navbar a:hover {
+                 background-color: #575757;
+             }
+             .navbar .search-bar {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar input[type="text"] {
+                 padding: 5px;
+                 border: none;
+                 border-radius: 5px;
+             }
+             .navbar .icons {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .icons i {
+                 color: white;
+                 margin-left: 20px;
+                 font-size: 20px;
+             }
+             .profile {
+                 background-color: white;
+                 padding: 20px;
+                 margin: 20px auto;
+                 width: 80%;
+                 max-width: 600px;
+                 border-radius: 10px;
+                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             }
+             .profile .user-info {
+                 text-align: center;
+                 margin-bottom: 20px;
+             }
+             .profile .user-info i {
+                 font-size: 50px;
+                 margin-bottom: 10px;
+                 background-color: #333;
+                 color: white;
+                 padding: 10px;
+                 border-radius: 10px;
+             }
+             .profile .user-info h2 {
+                 margin: 0;
+                 font-size: 24px;
+                 background-color: #f5f5f5;
+                 padding: 10px;
+                 border-radius: 10px;
+                 display: inline-block;
+                 margin-top: 10px;
+             }
+             .profile .user-info p {
+                 margin: 5px 0;
+                 color: #777;
+             }
+             .profile .history {
+                 margin-top: 20px;
+             }
+             .profile .history h3 {
+                 margin-bottom: 10px;
+             }
+             .profile .history .item {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 background-color: #f9f9f9;
+                 padding: 10px;
+                 border-radius: 5px;
+                 margin-bottom: 10px;
+             }
+             .profile .history .item img {
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 5px;
+             }
+             .profile .history .item .details {
+                 flex-grow: 1;
+                 margin-left: 10px;
+             }
+             .profile .history .item .details p {
+                 margin: 0;
+             }
+             .profile .history .item .details .price {
+                 color: #333;
+                 font-weight: bold;
+             }
+             .profile .history .item .details .quantity {
+                 color: #777;
+             }
+             .profile .sign-out {
+                 text-align: center;
+                 margin-top: 20px;
+             }
+             .profile .sign-out button {
+                 padding: 10px 20px;
+                 background-color: #333;
+                 color: white;
+                 border: none;
+                 border-radius: 5px;
+                 cursor: pointer;
+                 margin-bottom: 40px;
+             }
+             .profile .sign-out button:hover {
+                 background-color: #575757;
+             }
+             .footer {
+                 background-color: #333;
+                 color: white;
+                 text-align: center;
+                 padding: 5px;
+                 font-size: 5px;
+             }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>
+        Pastries That'll Make You Smile
+    </h1>
+</div>
+<div class="navbar">
+    <div class="links">
+        <a href="home.html">
+            HOME
+        </a>
+        <a href="#">
+            CATEGORY
+            <i class="fas fa-caret-down">
+            </i>
+        </a>
+        <a href="about.html">
+            ABOUT US
+        </a>
+        <a href="profile.html">
+            PROFILE
+        </a>
+        <a href="cart.html">
+            CART
+        </a>
+    </div>
+    <div class="search-bar">
+        <input placeholder="Search" type="text"/>
+        <i class="fas fa-search">
+        </i>
+    </div>
+    <div class="icons">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart">
+            </i>
+        </a>
+        <a href="profile.html">
+            <i class="fas fa-user">
+            </i>
+        </a>
+    </div>
+</div>
+<div class="profile">
+    <div class="user-info">
+        <i class="fas fa-user-circle" style="border-radius: 10px;">
+        </i>
+        <h2 style="background-color: #f5f5f5; padding: 10px; border-radius: 10px; display: inline-block; margin-top: 10px;">
+            John Doe
+        </h2>
+        <p>
+            Emailchuchu@gmail.com
+        </p>
+    </div>
+    <div class="history">
+        <h3>
+            History:
+        </h3>
+        <div class="item">
+            <img alt="Red Velvet Cake" height="50" src="https://storage.googleapis.com/a1aa/image/WOrRyG3uuvpmDdsGnewJWx9IN1OEQSeoU2K0bC1yfo1lwhonA.jpg" width="50"/>
+            <div class="details">
+                <p class="price">
+                    ₱ 240
+                </p>
+                <p>
+                    Red Velvet Cake
+                </p>
+            </div>
+            <p class="quantity">
+                2
+            </p>
+        </div>
+        <div class="item">
+            <img alt="Blueberry Cheesecake" height="50" src="https://storage.googleapis.com/a1aa/image/pKdwM6kBVroZCVSuxDFhfh8rQG8jFNyqaNPghkJcS31IcI6JA.jpg" width="50"/>
+            <div class="details">
+                <p class="price">
+                    ₱ 260
+                </p>
+                <p>
+                    Blueberry Cheesecake
+                </p>
+            </div>
+            <p class="quantity">
+                2
+            </p>
+        </div>
+    </div>
+    <div class="sign-out">
+        <a href="login.html">
+        <button style="margin-bottom: 40px;">
+            Sign Out
+        </button>
+        </a>
+    </div>
+</div>
+<div class="footer">
+    <p>
+        Adamson University | BS COMSCI Students
+    </p>
+
+</div>
+</body>
+</html>

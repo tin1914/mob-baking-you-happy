@@ -1,0 +1,327 @@
+<html>
+<head>
+    <title>
+        Pastries That'll Make You Smile
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+                 margin: 0;
+                 font-family: 'Roboto', sans-serif;
+                 background-color: #fdf4e3;
+             }
+             .header {
+                 background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
+                 background-size: cover;
+                 background-position: center;
+                 color: white;
+                 text-align: center;
+                 padding: 100px 0;
+                 position: relative;
+             }
+             .header h1 {
+                 font-size: 48px;
+                 margin: 0;
+             }
+             .navbar {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 background-color: #333;
+                 padding: 10px 20px;
+             }
+             .navbar a {
+                 color: white;
+                 text-decoration: none;
+                 padding: 10px 20px;
+             }
+             .navbar a:hover {
+                 background-color: #575757;
+             }
+             .navbar .search-bar {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar input[type="text"] {
+                 padding: 5px;
+                 border: none;
+                 border-radius: 5px;
+             }
+             .navbar .icons {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .icons i {
+                 color: white;
+                 margin-left: 20px;
+                 font-size: 20px;
+             }
+             .cart-container {
+                 background-color: #fff;
+                 margin: 20px auto;
+                 padding: 20px;
+                 border-radius: 10px;
+                 width: 90%;
+                 max-width: 800px;
+                 padding-bottom: 60px; /* Add padding to avoid footer overlap */
+             }
+             .cart-container h2 {
+                 margin: 0 0 20px 0;
+             }
+             .cart-item {
+                 display: flex;
+                 align-items: center;
+                 background-color: #fff;
+                 border-radius: 10px;
+                 padding: 10px;
+                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                 width: 100%;
+                 border: 1px solid #f0e6e6;
+                 margin-bottom: 10px;
+             }
+             .cart-item img {
+                 width: 80px;
+                 height: 80px;
+                 border-radius: 10px;
+                 margin-right: 20px;
+             }
+             .cart-item .item-details {
+                 flex-grow: 1;
+             }
+             .cart-item .item-details .price {
+                 font-size: 18px;
+                 font-weight: bold;
+                 margin-bottom: 5px;
+             }
+             .cart-item .item-details .name {
+                 font-size: 16px;
+                 color: #666;
+             }
+             .cart-item .quantity-control {
+                 display: flex;
+                 align-items: center;
+                 margin-right: 20px;
+             }
+             .cart-item .quantity-control button {
+                 background-color: #000;
+                 color: #fff;
+                 border: none;
+                 padding: 3px 6px; /* Make the button smaller */
+                 border-radius: 5px;
+                 cursor: pointer;
+                 font-size: 12px; /* Make the font size smaller */
+             }
+             .cart-item .quantity-control input {
+                 width: 30px;
+                 text-align: center;
+                 border: 1px solid #ccc;
+                 border-radius: 5px;
+                 margin: 0 10px;
+                 font-size: 16px;
+             }
+             .cart-item .remove-button {
+                 background-color: #ff4d4d;
+                 color: #fff;
+                 border: none;
+                 padding: 3px 6px; /* Make the button smaller */
+                 border-radius: 5px;
+                 cursor: pointer;
+                 font-size: 10px; /* Make the font size smaller */
+                 width: 60px; /* Set a fixed width to fit inside the box */
+                 text-align: center; /* Center the text */
+             }
+             .cart-total {
+                 display: flex;
+                 justify-content: flex-end;
+                 align-items: center;
+                 font-size: 1.2em;
+                 margin-top: 20px;
+                 flex-direction: column; /* Stack total and button vertically */
+             }
+             .cart-total .total-price {
+                 font-weight: bold;
+                 margin-bottom: 10px; /* Add margin to separate total and button */
+                 font-size: 18px; /* Make the total price smaller */
+             }
+             .checkout-button {
+                 display: inline-block;
+                 margin-top: 10px;
+                 padding: 3px 8px; /* Make the button smaller */
+                 font-size: 12px; /* Make the font size smaller */
+                 font-weight: bold;
+                 color: #333;
+                 background-color: #fff;
+                 border: 2px solid #d3d3d3;
+                 border-radius: 10px;
+                 text-decoration: none;
+             }
+             .footer {
+                 background-color: #333;
+                 color: white;
+                 text-align: center;
+                 padding: 5px;
+                 font-size: 5px;
+             }
+             @media (max-width: 600px) {
+                 .cart-item {
+                     width: 90%;
+                     padding: 8px;
+                 }
+                 .cart-item img {
+                     width: 60px;
+                     height: 60px;
+                     margin-right: 15px;
+                 }
+                 .cart-item .item-details .price {
+                     font-size: 16px;
+                 }
+                 .cart-item .item-details .name {
+                     font-size: 14px;
+                 }
+                 .cart-item .quantity-control button {
+                     padding: 2px 4px; /* Make the button smaller */
+                     font-size: 10px; /* Make the font size smaller */
+                 }
+                 .cart-item .quantity-control input {
+                     width: 25px;
+                     font-size: 14px;
+                 }
+                 .cart-item .remove-button {
+                     padding: 2px 4px; /* Make the button smaller */
+                     font-size: 8px; /* Make the font size smaller */
+                     width: 50px; /* Set a fixed width to fit inside the box */
+                     text-align: center; /* Center the text */
+                 }
+             }
+             .container {
+                 text-align: right;
+                 padding: 20px;
+             }
+             .total {
+                 font-size: 18px;
+                 font-weight: bold;
+                 margin-right: 10px; /* Move the total a bit to the left */
+             }
+             .amount {
+                 font-size: 14px; /* Make the amount smaller */
+                 font-weight: normal;
+             }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>
+        Pastries That'll Make You Smile
+    </h1>
+</div>
+<div class="navbar">
+    <div class="links">
+        <a href="home.html">
+            HOME
+        </a>
+        <a href="#">
+            CATEGORY
+            <i class="fas fa-caret-down">
+            </i>
+        </a>
+        <a href="about.html">
+            ABOUT US
+        </a>
+        <a href="profile.html">
+            PROFILE
+        </a>
+        <a href="cart.html">
+            CART
+        </a>
+    </div>
+    <div class="search-bar">
+        <input placeholder="Search" type="text"/>
+        <i class="fas fa-search">
+        </i>
+    </div>
+    <div class="icons">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart">
+            </i>
+        </a>
+        <a href="profile.html">
+            <i class="fas fa-user">
+            </i>
+        </a>
+    </div>
+</div>
+<div class="cart-container">
+    <h2>
+        Cart:
+    </h2>
+    <div class="cart-item">
+        <input type="checkbox"/>
+        <img alt="Chocolate Croissant" height="80" src="https://storage.googleapis.com/a1aa/image/OvHkKFEffMk4U0iTDwEubQewrz54G8j6FpBOo41MdafzvkRPB.jpg" width="80"/>
+        <div class="item-details">
+            <div class="price">
+                ₱ 145
+            </div>
+            <div class="name">
+                Chocolate Croissant
+            </div>
+        </div>
+        <div class="quantity-control">
+            <button>
+                -
+            </button>
+            <input type="text" value="2"/>
+            <button>
+                +
+            </button>
+        </div>
+        <button class="remove-button">
+            Remove
+        </button>
+    </div>
+    <div class="cart-item">
+        <input checked="" type="checkbox"/>
+        <img alt="Blueberry Muffin" height="80" src="https://storage.googleapis.com/a1aa/image/eS6ggwaSlv0TIatXc5HnpUhdo3GrR5OUIyftBHh908TiqZ0TA.jpg" width="80"/>
+        <div class="item-details">
+            <div class="price">
+                ₱ 120
+            </div>
+            <div class="name">
+                Blueberry Muffin
+            </div>
+        </div>
+        <div class="quantity-control">
+            <button>
+                -
+            </button>
+            <input type="text" value="1"/>
+            <button>
+                +
+            </button>
+        </div>
+        <button class="remove-button">
+            Remove
+        </button>
+    </div>
+    <div class="container">
+    <span class="total">
+     Total:
+    </span>
+        <span class="amount">
+     ₱ 265.00
+    </span>
+        <div>
+            <a class="checkout-button" href="checkout.html">
+                Proceed to Checkout
+            </a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>
+        Adamson University | BS COMSCI Students
+    </p>
+
+</div>
+</body>
+</html>
