@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>
+        Login Page
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+                 background-color: #2E2E2E;
+                 font-family: 'Arial', sans-serif;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 height: 100vh;
+                 margin: 0;
+             }
+             .container {
+                 text-align: center;
+                 color: #F5E8D0;
+             }
+             .logo {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 margin-bottom: 20px;
+             }
+             .logo img {
+                 width: 40px;
+                 height: 40px;
+                 margin-right: 10px;
+             }
+             .title {
+                 font-size: 24px;
+                 font-weight: bold;
+                 margin-bottom: 40px;
+             }
+             .login-title {
+                 font-size: 20px;
+                 font-weight: bold;
+                 margin-bottom: 20px;
+             }
+             .input-container {
+                 display: flex;
+                 align-items: center;
+                 background-color: #D3D3D3;
+                 border-radius: 25px;
+                 padding: 10px 20px;
+                 margin-bottom: 20px;
+             }
+             .input-container i {
+                 margin-right: 10px;
+                 color: #2E2E2E;
+             }
+             .input-container input {
+                 border: none;
+                 background: none;
+                 outline: none;
+                 width: 100%;
+                 color: #2E2E2E;
+             }
+             .btn {
+                 background-color: #F5E8D0;
+                 border: none;
+                 border-radius: 25px;
+                 padding: 10px 20px;
+                 font-size: 16px;
+                 cursor: pointer;
+                 color: #2E2E2E;
+             }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img alt="A donut icon" height="40" src="https://storage.googleapis.com/a1aa/image/BDIgbNoEMkZEAxc4veXmWFeXe5PeFIaHGVGky1nIEr0hw4hPB.jpg" width="40"/>
+        <div class="title">
+            Baking You Happy
+        </div>
+    </div>
+    <div class="login-title">
+        LOG-IN
+    </div>
+    <form>
+        <div class="input-container">
+            <i class="fas fa-envelope">
+            </i>
+            <input placeholder="Please enter your email here" required="" type="email"/>
+        </div>
+        <div class="input-container">
+            <i class="fas fa-lock">
+            </i>
+            <input placeholder="Please enter your password here" required="" type="password"/>
+        </div>
+        <button class="btn" type="submit">
+            <a href="home.html" style="text-decoration: none;">
+            Sign in
+        </button>
+    </form>
+</div>
+</body>
+</html>
