@@ -7,56 +7,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <style>
         body {
-                 margin: 0;
-                 font-family: 'Roboto', sans-serif;
-                 background-color: #fdf4e3;
-             }
-             .header {
-                 background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
-                 background-size: cover;
-                 background-position: center;
-                 color: white;
-                 text-align: center;
-                 padding: 100px 0;
-                 position: relative;
-             }
-             .header h1 {
-                 font-size: 48px;
-                 margin: 0;
-             }
-             .navbar {
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 background-color: #333;
-                 padding: 10px 20px;
-             }
-             .navbar a {
-                 color: white;
-                 text-decoration: none;
-                 padding: 10px 20px;
-             }
-             .navbar a:hover {
-                 background-color: #575757;
-             }
-             .navbar .search-bar {
-                 display: flex;
-                 align-items: center;
-             }
-             .navbar input[type="text"] {
-                 padding: 5px;
-                 border: none;
-                 border-radius: 5px;
-             }
-             .navbar .icons {
-                 display: flex;
-                 align-items: center;
-             }
-             .navbar .icons i {
-                 color: white;
-                 margin-left: 20px;
-                 font-size: 20px;
-             }
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                background-color: #fdf4e3;
+            }
+            .header {
+                background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                text-align: center;
+                padding: 100px 0;
+                position: relative;
+            }
+            .header {
+               padding:0;
+                margin: 0;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                padding: 10px 20px;
+            }
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+            .navbar a:hover {
+                background-color: #575757;
+            }
+            .navbar .search-bar {
+                display: flex;
+                align-items: center;
+            }
+            .navbar input[type="text"] {
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+            }
+            .navbar .icons {
+                display: flex;
+                align-items: center;
+            }
+            .navbar .icons i {
+                color: white;
+                margin-left: 20px;
+                font-size: 20px;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
          .content {
              padding: 40px 20px;
              text-align: center;
@@ -111,20 +135,34 @@
 </head>
 <body>
 <div class="header">
-    <h1>
-        Pastries That'll Make You Smile
-    </h1>
+    <img alt="Banner" src="pictures/nav.png" height="180" width="500" style="width: 100%;"/>
 </div>
 <div class="navbar">
     <div class="links">
         <a href="home.html">
             HOME
         </a>
-        <a href="#">
-            CATEGORY
-            <i class="fas fa-caret-down">
-            </i>
-        </a>
+        <div class="dropdown">
+            <a href="#">
+                CATEGORY
+                <i class="fas fa-caret-down">
+                </i>
+            </a>
+            <div class="dropdown-content">
+                <a href="home.html">
+                    All
+                </a>
+                <a href="cakes.html">
+                    Cake
+                </a>
+                <a href="pies.html">
+                    Pie
+                </a>
+                <a href="pastries.html">
+                    Pastry
+                </a>
+            </div>
+        </div>
         <a href="about.html">
             ABOUT US
         </a>
@@ -161,7 +199,7 @@
         </h2>
         <div class="team-members">
             <div class="team-member">
-                <img alt="Alvin Cabiliza - Web Back End Dev" height="150" src="https://storage.googleapis.com/a1aa/image/oRPq2TWRZRKVB9ixIJrV0taiX02FifywpED6TXd5cophZI6JA.jpg" width="150"/>
+                <img alt="Alvin Cabiliza - Web Back End Dev" height="150" src="pictures/Cabiliza,%20Alvin.jpg" width="150"/>
                 <h3>
                     Alvin Cabiliza
                 </h3>
@@ -171,7 +209,7 @@
 
             </div>
             <div class="team-member">
-                <img alt="Raf Cabilan - Mobile Back End Dev" height="150" src="https://storage.googleapis.com/a1aa/image/mmjeknuqI2XIZydjrEvyPL9IsBCNMcde59UIokVuTyiCzQ0TA.jpg" width="150"/>
+                <img alt="Raf Cabilan - Mobile Back End Dev" height="150" src="pictures/Cabilan,%20Rafael.jpg" width="150"/>
                 <h3>
                     Raf Cabilan
                 </h3>
@@ -180,16 +218,16 @@
                 </p>
             </div>
             <div class="team-member">
-                <img alt="Christine Rodriguez - Mobile Front End Dev" height="150" src="https://storage.googleapis.com/a1aa/image/TBWBe6X8z101bCfxzwqa2efz2uhaO35SpOve16xYRfXcvME9E.jpg" width="150"/>
+                <img alt="Christine Rodriguez - Mobile UI/UX Mobile Front End Dev" height="150" src="pictures/rodriguez,%20Christine.png" width="150"/>
                 <h3>
                     Christine Rodriguez
                 </h3>
                 <p>
-                    Mobile Front End Dev
+                    Mobile UI/UX Front End Dev
                 </p>
             </div>
             <div class="team-member">
-                <img alt="Jazleen Razote - Web UI/UX Front End Developer" height="150" src="https://storage.googleapis.com/a1aa/image/43WnlyEwdG7cPNViFenoovPvye6zazANHO3xLWyAB7j8yQ0TA.jpg" width="150"/>
+                <img alt="Jazleen Razote - Web UI/UX Front End Developer" height="150" src="pictures/Razote,%20Jazleen.jpg" width="150"/>
                 <h3>
                     Jazleen Razote
                 </h3>
@@ -199,7 +237,7 @@
 
             </div>
             <div class="team-member">
-                <img alt="Miguel Contreras - Web Back End Dev" height="150" src="https://storage.googleapis.com/a1aa/image/Z8KzXHiyd54aKFbqyehKKuEAbSmYc8vT4n94kXpuWP0fyQ0TA.jpg" width="150"/>
+                <img alt="Miguel Contreras - Web Back End Dev" height="150" src="pictures/Contreras,%20Miguel.png" width="150"/>
                 <h3>
                     Miguel Contreras
                 </h3>
@@ -208,7 +246,7 @@
                 </p>
             </div>
             <div class="team-member">
-                <img alt="Theolo Cinco - UI/UX Designer" height="150" src="https://storage.googleapis.com/a1aa/image/RGOULk76AOIfbKSp88rmvBNj9vW98GzwET01zYJfC6PBzQ0TA.jpg" width="150"/>
+                <img alt="Theolo Cinco - UI/UX Designer" height="150" src="pictures/Cinco,%20Theolo_.jpg" width="150"/>
                 <h3>
                     Theolo Cinco
                 </h3>

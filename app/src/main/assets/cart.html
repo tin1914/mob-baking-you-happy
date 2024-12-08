@@ -7,56 +7,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <style>
         body {
-                 margin: 0;
-                 font-family: 'Roboto', sans-serif;
-                 background-color: #fdf4e3;
-             }
-             .header {
-                 background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
-                 background-size: cover;
-                 background-position: center;
-                 color: white;
-                 text-align: center;
-                 padding: 100px 0;
-                 position: relative;
-             }
-             .header h1 {
-                 font-size: 48px;
-                 margin: 0;
-             }
-             .navbar {
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 background-color: #333;
-                 padding: 10px 20px;
-             }
-             .navbar a {
-                 color: white;
-                 text-decoration: none;
-                 padding: 10px 20px;
-             }
-             .navbar a:hover {
-                 background-color: #575757;
-             }
-             .navbar .search-bar {
-                 display: flex;
-                 align-items: center;
-             }
-             .navbar input[type="text"] {
-                 padding: 5px;
-                 border: none;
-                 border-radius: 5px;
-             }
-             .navbar .icons {
-                 display: flex;
-                 align-items: center;
-             }
-             .navbar .icons i {
-                 color: white;
-                 margin-left: 20px;
-                 font-size: 20px;
-             }
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                background-color: #fdf4e3;
+            }
+            .header {
+                background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                text-align: center;
+                padding: 100px 0;
+                position: relative;
+            }
+            .header {
+               padding:0;
+                margin: 0;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                padding: 10px 20px;
+            }
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+            .navbar a:hover {
+                background-color: #575757;
+            }
+            .navbar .search-bar {
+                display: flex;
+                align-items: center;
+            }
+            .navbar input[type="text"] {
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+            }
+            .navbar .icons {
+                display: flex;
+                align-items: center;
+            }
+            .navbar .icons i {
+                color: white;
+                margin-left: 20px;
+                font-size: 20px;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
              .cart-container {
                  background-color: #fff;
                  margin: 20px auto;
@@ -211,20 +235,34 @@
 </head>
 <body>
 <div class="header">
-    <h1>
-        Pastries That'll Make You Smile
-    </h1>
+    <img alt="Banner" src="pictures/nav.png" height="180" width="500" style="width: 100%;"/>
 </div>
 <div class="navbar">
     <div class="links">
         <a href="home.html">
             HOME
         </a>
-        <a href="#">
-            CATEGORY
-            <i class="fas fa-caret-down">
-            </i>
-        </a>
+        <div class="dropdown">
+            <a href="#">
+                CATEGORY
+                <i class="fas fa-caret-down">
+                </i>
+            </a>
+            <div class="dropdown-content">
+                <a href="home.html">
+                    All
+                </a>
+                <a href="cakes.html">
+                    Cake
+                </a>
+                <a href="pies.html">
+                    Pie
+                </a>
+                <a href="pastries.html">
+                    Pastry
+                </a>
+            </div>
+        </div>
         <a href="about.html">
             ABOUT US
         </a>

@@ -7,123 +7,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <style>
         body {
-                 margin: 0;
-                 font-family: 'Roboto', sans-serif;
-                 background-color: #fdf4e3;
-             }
-             .header {
-                 background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
-                 background-size: cover;
-                 background-position: center;
-                 color: white;
-                 text-align: center;
-                 padding: 100px 0;
-                 position: relative;
-             }
-             .header h1 {
-                 font-size: 48px;
-                 margin: 0;
-             }
-             .navbar {
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 background-color: #333;
-                 padding: 10px 20px;
-             }
-             .navbar a {
-                 color: white;
-                 text-decoration: none;
-                 padding: 10px 20px;
-             }
-             .navbar a:hover {
-                 background-color: #575757;
-             }
-             .navbar .search-bar {
-                 display: flex;
-                 align-items: center;
-             }
-             .navbar input[type="text"] {
-                 padding: 5px;
-                 border: none;
-                 border-radius: 5px;
-             }
-             .navbar .icons {
-                 display: flex;
-                 align-items: center;
-             }
-             .navbar .icons i {
-                 color: white;
-                 margin-left: 20px;
-                 font-size: 20px;
-             }
-             .dropdown {
-                 position: relative;
-                 display: inline-block;
-             }
-             .dropdown-content {
-                 display: none;
-                 position: absolute;
-                 background-color: #f9f9f9;
-                 min-width: 160px;
-                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                 z-index: 1;
-             }
-             .dropdown-content a {
-                 color: black;
-                 padding: 12px 16px;
-                 text-decoration: none;
-                 display: block;
-             }
-             .dropdown-content a:hover {
-                 background-color: #f1f1f1;
-             }
-             .dropdown:hover .dropdown-content {
-                 display: block;
-             }
-             .content {
-                 display: flex;
-                 flex-wrap: wrap;
-                 justify-content: center;
-                 padding: 20px;
-             }
-             .product {
-                 background-color: white;
-                 border-radius: 10px;
-                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                 margin: 10px;
-                 padding: 20px;
-                 text-align: center;
-                 width: 200px;
-             }
-             .product img {
-                 width: 100%;
-                 border-radius: 10px;
-             }
-             .product p {
-                 margin: 10px 0;
-             }
-             .product .price {
-                 font-weight: bold;
-             }
-             .product .cart-icon {
-                 color: #333;
-                 cursor: pointer;
-             }
-             .footer {
-                 background-color: #333;
-                 color: white;
-                 text-align: center;
-                 padding: 5px;
-                 font-size: 5px;
-             }
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                background-color: #fdf4e3;
+            }
+            .header {
+                background-image: url('https://placehold.co/1920x400?text=Bakery+Background');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                text-align: center;
+                padding: 100px 0;
+                position: relative;
+            }
+            .header {
+               padding:0;
+                margin: 0;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                padding: 10px 20px;
+            }
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+            .navbar a:hover {
+                background-color: #575757;
+            }
+            .navbar .search-bar {
+                display: flex;
+                align-items: center;
+            }
+            .navbar input[type="text"] {
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+            }
+            .navbar .icons {
+                display: flex;
+                align-items: center;
+            }
+            .navbar .icons i {
+                color: white;
+                margin-left: 20px;
+                font-size: 20px;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 20px;
+
+            }
+            .product {
+
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin: 10px;
+                padding: 20px;
+                text-align: center;
+                width: 200px;
+            }
+            .product img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .product p  {
+
+                background-col;
+
+                 float: left;
+            }
+            .product .price {
+                font-weight: bold;
+                float: left;
+            }
+            .product .cart-icon {
+               float:right;
+                flex:right;
+                color: #333;
+                cursor: pointer;
+            }
+            .footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                font-size: 5px;
+            }
     </style>
 </head>
 <body>
 <div class="header">
-    <h1>
-        Pastries That'll Make You Smile
-    </h1>
+    <img alt="Banner" src="pictures/nav.png" height="180" width="500" style="width: 100%;"/>
 </div>
 <div class="navbar">
     <div class="links">
@@ -179,138 +185,227 @@
 </div>
 <div class="content">
     <div class="product">
-        <img alt="New York Cheesecake" height="200" src="https://storage.googleapis.com/a1aa/image/ZtrEp1PH4ibyJFSEynitHtwoCVFwenetUFXfzUEmKxX9friPB.jpg" width="200"/>
+        <img alt="New York Cheesecake" height="200" src="pictures/cake1.jpg" width="200"/>
         <p class="price">
             P 245
         </p>
         <p>
             New York Cheesecake
         </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
+        <div class="cart-icon">
+            <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+        </div>
     </div>
     <div class="product">
-        <img alt="Blueberry Cheesecake" height="200" src="https://storage.googleapis.com/a1aa/image/GHMGAEfkdxytPS0NSaT5SQXFzSywXHfpNcjNvftEezl2AsiPB.jpg" width="200"/>
+        <img alt="Blueberry Cheesecake" height="200" src="pictures/cake2.jpg" width="200"/>
         <p class="price">
             P 260
         </p>
         <p>
             Blueberry Cheesecake
         </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
+        <div class="cart-icon">
+            <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+        </div>
     </div>
     <div class="product">
-        <img alt="Classic Chocolate Cake" height="200" src="https://storage.googleapis.com/a1aa/image/5Ovg2CvnFvr7DNVfNi0V6zNo3e68TKhTdY2JSt9TdmnHAr4TA.jpg" width="200"/>
+        <img alt="Classic Chocolate Cake" height="200" src="pictures/cake3.jpg" width="200"/>
         <p class="price">
             P 230
         </p>
         <p>
             Classic Chocolate Cake
         </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
+        <div class="cart-icon">
+            <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+        </div>
     </div>
     <div class="product">
-        <img alt="Red Velvet Cake" height="200" src="https://storage.googleapis.com/a1aa/image/qMoe5yT1EP0EdCP4sF2XwUjSpveepsBtl0GOsMfOQUDFAsiPB.jpg" width="200"/>
+        <img alt="Red Velvet Cake" height="200" src="pictures/cake4.jpg" width="200"/>
         <p class="price">
             P 240
         </p>
         <p>
             Red Velvet Cake
         </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
+        <div class="cart-icon">
+            <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+        </div>
     </div>
     <div class="product">
-        <img alt="Vanilla Bean Cake" height="200" src="https://storage.googleapis.com/a1aa/image/wdEUwjD5z4KOKpFRWP5Ld8QelhGiuh86frjWhdPk57UAAr4TA.jpg" width="200"/>
+        <img alt="Vanilla Bean Cake" height="200" src="pictures/cake5.jpg" width="200"/>
         <p class="price">
             P 230
         </p>
         <p>
             Vanilla Bean Cake
         </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
+        <div class="cart-icon">
+            <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+        </div>
     </div>
-    <div class="product">
-        <img alt="Mango Passion Cake" height="200" src="https://storage.googleapis.com/a1aa/image/thaQ8ZnFBD6YPZRXLjaB6sff1qufMWky1wa5Rfw5v213fXFfE.jpg" width="200"/>
-        <p class="price">
-            P 250
-        </p>
-        <p>
-            Mango Passion Cake
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
+        <div class="product">
+            <img alt="Mango Passion Cake" height="200" src="pictures/cake6.jpg" width="200"/>
+            <p class="price">
+                P 250
+            </p>
+            <p>
+                Mango Passion Cake
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="French Butter Croissant" height="200" src="pictures/pastry1.jpg" width="200"/>
+            <p class="price">
+                P 135
+            </p>
+            <p>
+                French Butter Croissant
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Chocolate Croissant" height="200" src="pictures/pastry2.jpg" width="200"/>
+            <p class="price">
+                P 145
+            </p>
+            <br>
+            <p>
+                Chocolate Croissant
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Bretton Roll" height="200" src="pictures/pastry3.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <br>
+            <p>
+                Bretton Roll
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Cheese Danish" height="200" src="pictures/pastry4.jpg" width="200"/>
+            <p class="price">
+                P 100
+            </p>
+            <br>
+            <p>
+                Cheese Danish
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Dark Chocolate Twist" height="200" src="pictures/pastry5.jpg" width="200"/>
+            <p class="price">
+                P 130
+            </p>
+            <br>
+            <p>
+                Dark Chocolate Twist
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Tomato and Mushroom Twist" height="200" src="pictures/pastry6.jpg" width="200"/>
+            <p class="price">
+                P 120
+            </p>
+            <br>
+            <p style="float:left;">
+                Tomato and Mushroom Twist
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Banoffee Pie" height="200" src="pictures/dessert1.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <p>
+                Banoffee Pie
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Custard Tart" height="200" src="pictures/dessert2.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <p>
+                Custard Tart
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Strawberry Tart" height="200" src="pictures/dessert3.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <p>
+                Strawberry Tart
+            </p>
+            <<div class="cart-icon">
+            <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+        </div>
+        </div>
+        <div class="product">
+            <img alt="Chocolate Tart" height="200" src="pictures/dessert4.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <p>
+                Chocolate Tart
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Raspberry Meringue Tartlet" height="200" src="pictures/dessert5.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <p>
+                Raspberry Meringue Tartlet
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Tiramisu" height="200" src="pictures/dessert6.jpg" width="200"/>
+            <p class="price">
+                P 230
+            </p>
+            <p>
+                Tiramisu
+            </p>
+            <div class="cart-icon">
+                <img alt="cart" height="20" src="pictures/cart.png" width="20" style="width:100%"/>
+            </div>
+        </div>
     </div>
-    <div class="product">
-        <img alt="French Butter Croissant" height="200" src="https://storage.googleapis.com/a1aa/image/4xykOgQPV2ZXNtvnRaGuOWkuMLOupprHPaweUsHBSGkEgV8JA.jpg" width="200"/>
-        <p class="price">
-            P 135
-        </p>
-        <p>
-            French Butter Croissant
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
-    </div>
-    <div class="product">
-        <img alt="Chocolate Croissant" height="200" src="https://storage.googleapis.com/a1aa/image/0hKVq1LfLEzhJKQNiyEtrphUlawkA1Tnj8QkgKAMxnyBgV8JA.jpg" width="200"/>
-        <p class="price">
-            P 145
-        </p>
-        <p>
-            Chocolate Croissant
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
-    </div>
-    <div class="product">
-        <img alt="Breton Tart" height="200" src="https://storage.googleapis.com/a1aa/image/uhzZunETrjZlPlyg5BYpwb33ik2YOcm8bn0WNUEa6vJDwKeJA.jpg" width="200"/>
-        <p class="price">
-            P 230
-        </p>
-        <p>
-            Breton Tart
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
-    </div>
-    <div class="product">
-        <img alt="Cheese Danish" height="200" src="https://storage.googleapis.com/a1aa/image/IVRwqHoGE1JDJ1wkS4i0wDe6eDIB4ZFcTKiom1MWLTGEAr4TA.jpg" width="200"/>
-        <p class="price">
-            P 100
-        </p>
-        <p>
-            Cheese Danish
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
-    </div>
-    <div class="product">
-        <img alt="Dark Chocolate Twist" height="200" src="https://storage.googleapis.com/a1aa/image/0oOOsmcyaAaiBx7W3z0yGK6Pdg2ZvqazSMCGXptTPotCwKeJA.jpg" width="200"/>
-        <p class="price">
-            P 130
-        </p>
-        <p>
-            Dark Chocolate Twist
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
-    </div>
-    <div class="product">
-        <img alt="Tomato &amp; Mushroom Twist" height="200" src="https://storage.googleapis.com/a1aa/image/f0ZCfHQp2QoShUorf76ReZ3Hi9Q1dSFSlfdxhSAh5y5sAYFfE.jpg" width="200"/>
-        <p class="price">
-            P 120
-        </p>
-        <p>
-            Tomato &amp; Mushroom Twist
-        </p>
-        <i class="fas fa-cart-plus cart-icon">
-        </i>
-    </div>
-</div>
 <div class="footer">
     <p>
         Adamson University | BS COMSCI Students

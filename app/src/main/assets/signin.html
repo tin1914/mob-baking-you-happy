@@ -58,7 +58,21 @@
                  width: 100%;
                  color: #2E2E2E;
              }
-             .btn {
+             .button-container {
+                 margin-top: 20px;
+             }
+             .button-container button {
+                 background-color: white;
+                 color: #333;
+                 border: none;
+                 padding: 8px 60px;
+                 font-size: 14px;
+                 font-weight: 700;
+                 border-radius: 5px;
+                 cursor: pointer;
+                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+             }
+.btn {
                  background-color: #F5E8D0;
                  border: none;
                  border-radius: 25px;
@@ -72,10 +86,10 @@
 <body>
 <div class="container">
     <div class="logo">
-        <img alt="A donut icon" height="40" src="https://storage.googleapis.com/a1aa/image/BDIgbNoEMkZEAxc4veXmWFeXe5PeFIaHGVGky1nIEr0hw4hPB.jpg" width="40"/>
-        <div class="title">
+        <img alt="A donut icon" height="40" src="pictures/logo.jpg" width="40"/>
+        <h1 style="font-size: 20px; font-weight: 700; font-family: 'Roboto Slab', serif; margin-bottom: 5px;">
             Baking You Happy
-        </div>
+        </h1>
     </div>
     <div class="login-title">
         LOG-IN
@@ -91,9 +105,16 @@
             </i>
             <input placeholder="Please enter your password here" required="" type="password"/>
         </div>
+        <div class="button-container">
+            <a href="signin.html" style="text-decoration: none;">
+                <button style="background-color: white; color: #333; border: none; padding: 8px 60px; font-size: 14px; font-weight: 700; border-radius: 5px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+                    Sign in
+                </button>
+            </a>
+        </div>
         <button class="btn" type="submit">
             <a href="home.html" style="text-decoration: none;">
-            Sign in
+                Sign in
         </button>
     </form>
 </div>
